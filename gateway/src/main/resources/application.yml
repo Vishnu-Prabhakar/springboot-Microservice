@@ -1,0 +1,16 @@
+zuul:
+   routes:
+      accounts-web:
+         url: http://localhost:8081
+         
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:1111/eureka/
+
+ribbon:
+   eureka:
+      enabled: false
+
+server:
+   port:8080
