@@ -18,4 +18,19 @@ eureka:
 error:
   whitelabel:
     enabled:  false
+    
+# HTTP Server (Tomcat) Port
+server: 
+  port: 8081
+  
+endpoints:
+   info:
+      id: info
+      enabled: true
+info:
+   app:
+      name: account web client
+      description: This is the web client for accessing account information from accounts producer component       
+         
+      
       

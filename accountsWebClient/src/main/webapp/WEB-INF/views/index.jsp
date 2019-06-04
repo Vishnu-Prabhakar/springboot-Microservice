@@ -43,7 +43,7 @@
 			<h1>Accounts Web - Home Page</h1>
 
 			<ul>
-				<li><a href="/accountList">View Account List</a></li>
+				<li><a href="/account-web/accountList">View Account List</a></li>
 			</ul>
 			
 		</div>
