@@ -1,16 +1,26 @@
+#This config is to access via IP address
+#zuul:
+   #routes:
+      #accounts-web:
+         #url: http://localhost:8081
+
+spring:
+  application:
+    name: account-web-proxy
+
+#This config is to access via eureka app name    
 zuul:
    routes:
       accounts-web:
-         url: http://localhost:8081
+         path: /accounts-web/**
+         serviceId: accounts-web
          
 eureka:
   client:
-    serviceUrl:
-      defaultZone: http://localhost:1111/eureka/
-
-ribbon:
-   eureka:
-      enabled: false
+   registerWithEureka: false
+   fetchRegistry: true
+   serviceUrl:
+         defaultZone: http://localhost:1111/eureka/
 
 server:
-   port:8080
+   port: 8080    
